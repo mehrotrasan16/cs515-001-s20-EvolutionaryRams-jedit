@@ -419,37 +419,38 @@ public class StatusBar extends JPanel
 				buf.append(')');
 			}
 			/*START: Sanket M 2 March 2020 jEdit Change Request #1 je#1*/
-//			int start = textArea.getLineStartOffset(currLine);
-//			int caretPosition = textArea.getCaretPosition();
-//			int currLine = textArea.getCaretLine();
-//			int bufferLength = buffer.getLength();
-//			String full_text = buffer.getText(start,dot,seg);
+			buffer.getText(0, caretPosition, seg);
+			Integer wordOffset = seg.toString().split("[\\n+]*[\\s]").length;
+			buffer.getText(0, bufferLength, seg);
+			Integer totalNumberoWords = seg.toString().split("[\\n+]*[\\s+]").length;
 			
 			
-			//int totalwordcount = buffer.
 			if (jEdit.getBooleanProperty("view.status.show-word-offset", true) &&
 					jEdit.getBooleanProperty("view.status.show-word-totalcount", true))
 				{
 					buf.append('(');
-					buf.append(999);
+					buf.append(wordOffset);
 					buf.append('/');
-					buf.append(1111); 
+					buf.append(totalNumberoWords); 
 					buf.append(')');
 				}
 				else if (jEdit.getBooleanProperty("view.status.show-word-offset", true))
 				{
 					buf.append('(');
-					buf.append(777);
+					buf.append(wordOffset);
 					buf.append(')');
 				}
 				else if (jEdit.getBooleanProperty("view.status.show-word-totalcount", true))
 				{
 					buf.append('(');
-					buf.append(888);
+					buf.append(totalNumberoWords);
 					buf.append(')');
 				}
+			// for GC	
+			seg.array = null;
+			seg.count = 0;
 			/*END: Sanket M 2 March 2020 jEdit Change Request #1 je#1*/
-
+			
 			caretStatus.setText(buf.toString());
 			buf.setLength(0);
 		}

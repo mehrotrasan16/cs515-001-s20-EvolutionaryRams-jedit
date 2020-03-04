@@ -129,12 +129,27 @@ public class StatusBarOptionPane extends AbstractOptionPane
 		showCaretBufferLength = new JCheckBox(jEdit.getProperty("options.status.caret.bufferlength", "Show length of file"),
 			jEdit.getBooleanProperty("view.status.show-caret-bufferlength", true));
 		showCaretBufferLength.setName("showCaretBufferLength");
+		
+		/*START: Sanket M 4 March 2020 jEdit Change Request #1 je#1*/
+		showWordOffset = new JCheckBox(jEdit.getProperty("options.status.caret.show-word-offset", "Show caret word offset"),
+				jEdit.getBooleanProperty("view.status.show-word-offset", true));
+		showWordOffset.setName("showWordOffset");
+		showTotalWordCount = new JCheckBox(jEdit.getProperty("options.status.caret.show-word-totalcount", "Show total number of words in file"),
+				jEdit.getBooleanProperty("view.status.show-word-totalcount", true));
+		showTotalWordCount.setName("showTotalWordCount");
+		/*END: Sanket M 4 March 2020 jEdit Change Request #1 je#1*/
+		
 		optionsPanel.addComponent(showCaretLineNumber);
 		optionsPanel.addComponent(showCaretDot);
 		optionsPanel.addComponent(showCaretVirtual);
 		optionsPanel.addComponent(showCaretOffset);
 		optionsPanel.addComponent(showCaretBufferLength);
-
+		
+		/*START: Sanket M 2 March 2020 jEdit Change Request #1 je#1*/
+		optionsPanel.addComponent(showWordOffset);			
+		optionsPanel.addComponent(showTotalWordCount);
+		/*END: Sanket M 2 March 2020 jEdit Change Request #1 je#1*/
+		
 		//}}}
 
 
@@ -237,7 +252,11 @@ public class StatusBarOptionPane extends AbstractOptionPane
 		jEdit.setBooleanProperty("view.status.show-caret-virtual", showCaretVirtual.isSelected());
 		jEdit.setBooleanProperty("view.status.show-caret-offset", showCaretOffset.isSelected());
 		jEdit.setBooleanProperty("view.status.show-caret-bufferlength", showCaretBufferLength.isSelected());
-
+		
+		//Sanket M on 4th March 2020 for jEdit StatusBar change request #1 je#1
+		jEdit.setBooleanProperty("view.status.show-word-offset", showWordOffset.isSelected());
+		jEdit.setBooleanProperty("view.status.show-word-totalcount", showTotalWordCount.isSelected());
+		//END: Sanket M on 4th March 2020 for jEdit StatusBar change request #1 je#1
 	} //}}}
 
 	//{{{ Private members
@@ -262,6 +281,10 @@ public class StatusBarOptionPane extends AbstractOptionPane
 	private JCheckBox showCaretVirtual;
 	private JCheckBox showCaretOffset;
 	private JCheckBox showCaretBufferLength;
+	//Sanket M on 4th March 2020 for jEdit StatusBar change request #1 je#1
+	private JCheckBox showWordOffset;
+	private JCheckBox showTotalWordCount;
+	//END Sanket M on 4th March 2020 for jEdit StatusBar change request #1 je#1
 	//}}}
 
 	//{{{ updateButtons() method
