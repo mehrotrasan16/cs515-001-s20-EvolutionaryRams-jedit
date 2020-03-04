@@ -403,7 +403,7 @@ public class StatusBar extends JPanel
 				buf.append('(');
 				buf.append(caretPosition);
 				buf.append('/');
-				buf.append(bufferLength);
+				buf.append(bufferLength); 
 				buf.append(')');
 			}
 			else if (jEdit.getBooleanProperty("view.status.show-caret-offset", true))
@@ -418,6 +418,37 @@ public class StatusBar extends JPanel
 				buf.append(bufferLength);
 				buf.append(')');
 			}
+			/*START: Sanket M 2 March 2020 jEdit Change Request #1 je#1*/
+//			int start = textArea.getLineStartOffset(currLine);
+//			int caretPosition = textArea.getCaretPosition();
+//			int currLine = textArea.getCaretLine();
+//			int bufferLength = buffer.getLength();
+//			String full_text = buffer.getText(start,dot,seg);
+			
+			
+			//int totalwordcount = buffer.
+			if (jEdit.getBooleanProperty("view.status.show-word-offset", true) &&
+					jEdit.getBooleanProperty("view.status.show-word-totalcount", true))
+				{
+					buf.append('(');
+					buf.append(999);
+					buf.append('/');
+					buf.append(1111); 
+					buf.append(')');
+				}
+				else if (jEdit.getBooleanProperty("view.status.show-word-offset", true))
+				{
+					buf.append('(');
+					buf.append(777);
+					buf.append(')');
+				}
+				else if (jEdit.getBooleanProperty("view.status.show-word-totalcount", true))
+				{
+					buf.append('(');
+					buf.append(888);
+					buf.append(')');
+				}
+			/*END: Sanket M 2 March 2020 jEdit Change Request #1 je#1*/
 
 			caretStatus.setText(buf.toString());
 			buf.setLength(0);

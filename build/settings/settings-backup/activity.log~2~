@@ -1,0 +1,168 @@
+Log file created on Thu Feb 27 14:47:14 MST 2020
+IMPORTANT:
+Because updating this file after every log message would kill
+performance, it will be *incomplete* unless you invoke the
+Utilities->Troubleshooting->Update Activity Log on Disk command!
+2:47:13 PM [main] [message] Log: When reporting bugs, please include the following information:
+2:47:13 PM [main] [message] Log: java.version=1.8.0_231
+2:47:13 PM [main] [message] Log: java.vm.version=25.231-b11
+2:47:13 PM [main] [message] Log: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2:47:13 PM [main] [message] Log: java.runtime.version=1.8.0_231-b11
+2:47:13 PM [main] [message] Log: java.runtime.name=Java(TM) SE Runtime Environment
+2:47:13 PM [main] [message] Log: java.vendor=Oracle Corporation
+2:47:13 PM [main] [message] Log: java.compiler=null
+2:47:13 PM [main] [message] Log: os.name=Windows 10
+2:47:13 PM [main] [message] Log: os.version=10.0
+2:47:13 PM [main] [message] Log: os.arch=amd64
+2:47:13 PM [main] [message] Log: user.home=C:\Users\Sanke
+2:47:13 PM [main] [message] Log: java.home=C:\Program Files (x86)\Java\jdk1.8.0_231\jre
+2:47:13 PM [main] [message] Log: java.class.path=D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\jedit.jar
+2:47:13 PM [main] [message] jEdit: starting with command line arguments: -settings=D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build/settings
+2:47:13 PM [main] [debug] jEdit: before splash screen activation:31 ms
+2:47:14 PM [main] [debug] jEdit: after splash screen activation:271 ms
+2:47:14 PM [main] [notice] jEdit: jEdit version 5.5.0
+2:47:14 PM [main] [message] jEdit: Settings directory is D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings
+2:47:14 PM [main] [message] jEdit: jEdit home directory is D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build
+2:47:14 PM [main] [debug] SplashScreen: init:13/171ms
+2:47:14 PM [main] [debug] SplashScreen: init system properties:12/183ms
+2:47:14 PM [main] [message] BeanShell: Beanshell Init
+2:47:14 PM [main] [debug] SplashScreen: init beanshell:19/202ms
+2:47:14 PM [main] [debug] SplashScreen: loading site properties:2/204ms
+2:47:14 PM [main] [debug] SplashScreen: loading user properties:4/208ms
+2:47:14 PM [main] [debug] GUIUtilities: Icon theme set to: tango
+2:47:14 PM [main] [debug] GUIUtilities: Loading icon theme from: jeditresource:/org/gjt/sp/jedit/icons/themes/tango/
+2:47:14 PM [main] [debug] SplashScreen: init GUI:1/209ms
+2:47:14 PM [main] [debug] EditServer: jEdit server started on port 54919
+2:47:14 PM [main] [debug] EditServer: Authorization key is 159892860
+2:47:14 PM [main] [debug] SplashScreen: init server:3/212ms
+2:47:14 PM [main] [debug] jEdit: initPLAF non-edt old=javax.swing.plaf.metal.MetalLookAndFeel requested=null new=javax.swing.plaf.metal.MetalLookAndFeel
+2:47:14 PM [main] [debug] SplashScreen: init look and feel:2/214ms
+2:47:14 PM [main] [debug] SplashScreen: init VFS Manager:0/214ms
+2:47:14 PM [main] [debug] ActionSet: Loading actions from jar:file:/D:/User/SanketM/Dev/Github/cs515-001-s20-EvolutionaryRams-jedit2/build/jedit.jar!/org/gjt/sp/jedit/actions.xml
+2:47:14 PM [main] [debug] DockableWindowManager: Loading dockables from jar:file:/D:/User/SanketM/Dev/Github/cs515-001-s20-EvolutionaryRams-jedit2/build/jedit.jar!/org/gjt/sp/jedit/dockables.xml
+2:47:14 PM [main] [debug] SplashScreen: init resources:43/257ms
+2:47:14 PM [main] [debug] KeymapManagerImpl: copyKeymap(jEdit,imported)
+2:47:14 PM [main] [debug] KeymapManagerImpl: Copying D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\keymaps\jEdit_keys.props to D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\keymaps\imported_keys.props
+2:47:14 PM [AWT-EventQueue-0] [debug] EditBus: SearchSettingsChanged[source=null]
+2:47:14 PM [main] [debug] SplashScreen: Migrate keymaps:45/302ms
+2:47:14 PM [main] [notice] jEdit: Loading plugins from D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\jars
+2:47:14 PM [main] [debug] PluginJAR: Opening D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\jars\QuickNotepad.jar
+2:47:14 PM [main] [debug] ActionSet: Loading actions from jeditresource:/QuickNotepad.jar!/actions.xml
+2:47:14 PM [main] [debug] DockableWindowManager: Loading dockables from jeditresource:/QuickNotepad.jar!/dockables.xml
+2:47:14 PM [main] [debug] PluginJAR: Writing D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\jars-cache\QuickNotepad.jar.summary
+2:47:14 PM [AWT-EventQueue-0] [debug] EditBus: PluginUpdate[what=LOADED,exit=false,version=5.0,source=D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\jars\QuickNotepad.jar,class=QuickNotepadPlugin]
+2:47:14 PM [main] [notice] jEdit: Loading plugins from D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\jars
+2:47:14 PM [main] [debug] SplashScreen: init plugins:13/315ms
+2:47:14 PM [main] [debug] SplashScreen: init history model:1/316ms
+2:47:14 PM [main] [debug] SplashScreen: init buffer history:1/317ms
+2:47:14 PM [main] [debug] SplashScreen: init killring:1/318ms
+2:47:14 PM [main] [message] CheckFileStatus: Performing migration step: checkFileStatus
+2:47:14 PM [main] [debug] jEdit: initPLAF non-edt old=javax.swing.plaf.metal.MetalLookAndFeel requested=null new=javax.swing.plaf.metal.MetalLookAndFeel
+2:47:14 PM [main] [debug] jEdit: SOCKS proxy disabled
+2:47:14 PM [main] [debug] jEdit: HTTP proxy disabled
+2:47:14 PM [AWT-EventQueue-0] [debug] EditBus: PropertiesChanged[source=null]
+2:47:14 PM [main] [debug] SplashScreen: init various properties:48/366ms
+2:47:14 PM [main] [message] jEdit: Loading mode catalog file D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\modes\catalog
+2:47:14 PM [main] [message] jEdit: Loading mode catalog file D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\modes\catalog
+2:47:14 PM [main] [debug] SplashScreen: init modes:23/389ms
+2:47:14 PM [main] [debug] SplashScreen: activate plugins:2/391ms
+2:47:14 PM [main] [debug] Macros: Registered beanshell macro handler
+2:47:14 PM [AWT-EventQueue-0] [debug] EditBus: DynamicMenuChanged[menu=macros,source=null]
+2:47:14 PM [main] [debug] SplashScreen: init macros:9/400ms
+2:47:14 PM [main] [message] BeanShell: Running script D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\startup\startup.bsh
+2:47:14 PM [main] [notice] jEdit$5: Loading edit mode D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\modes\text.xml
+2:47:14 PM [main] [debug] String: BeanShell interpreter version 2.0b4-jedit
+2:47:14 PM [main] [debug] SplashScreen: run startup scripts:57/457ms
+2:47:14 PM [main] [debug] SplashScreen: run startup scripts:58/458ms
+2:47:14 PM [main] [debug] SplashScreen: run startup scripts:58/458ms
+2:47:14 PM [main] [debug] jEdit: main done:579 ms
+2:47:14 PM [AWT-EventQueue-0] [debug] EditBus: BufferUpdate[what=PROPERTIES_CHANGED,view=null,source=Untitled-1 (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\)]
+2:47:14 PM [AWT-EventQueue-0] [debug] EditBus: BufferUpdate[what=CREATED,view=null,source=Untitled-1 (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\)]
+2:47:14 PM [AWT-EventQueue-0] [debug] EditBus: BufferUpdate[what=LOAD_STARTED,view=null,source=Untitled-1 (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\)]
+2:47:14 PM [AWT-EventQueue-0] [debug] EditBus: BufferUpdate[what=LOADED,view=null,source=Untitled-1 (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\)]
+2:47:14 PM [AWT-EventQueue-0] [debug] BufferSet: 1647981974: addBufferSetListener org.gjt.sp.jedit.EditPane[inactive]
+2:47:14 PM [AWT-EventQueue-0] [debug] EditBus: BufferChanging[what=BUFFER_CHANGING,source=org.gjt.sp.jedit.EditPane[inactive]]
+2:47:14 PM [AWT-EventQueue-0] [debug] BufferSet: 1647981974 addBufferAt(Untitled-1 (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\),-1)
+2:47:14 PM [AWT-EventQueue-0] [debug] BufferSet: 1647981974: Buffer added Untitled-1 (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\) at 0
+2:47:14 PM [AWT-EventQueue-0] [debug] EditBus: EditPaneUpdate[what=CREATED,source=org.gjt.sp.jedit.EditPane[inactive]]
+2:47:14 PM [AWT-EventQueue-0] [debug] EditBus: ViewUpdate[what=CREATED,source=org.gjt.sp.jedit.View[active]]
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader: java.io.FileNotFoundException: D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\doc\whatsnew\toc.xml (The system cannot find the path specified)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.io.FileInputStream.open0(Native Method)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.io.FileInputStream.open(FileInputStream.java:195)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.io.FileInputStream.<init>(FileInputStream.java:138)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.io.FileInputStream.<init>(FileInputStream.java:93)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.net.URL.openStream(URL.java:1067)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.jedit.help.HelpTOCLoader.loadTOC(HelpTOCLoader.java:166)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.jedit.help.HelpTOCLoader.createTOC(HelpTOCLoader.java:117)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.jedit.help.HelpTOCPanel$2.run(HelpTOCPanel.java:105)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.util.TaskManager$MyTask._run(TaskManager.java:258)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.util.Task.run(Task.java:65)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.lang.Thread.run(Thread.java:748)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader: java.io.FileNotFoundException: D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\doc\users-guide\toc.xml (The system cannot find the path specified)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.io.FileInputStream.open0(Native Method)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.io.FileInputStream.open(FileInputStream.java:195)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.io.FileInputStream.<init>(FileInputStream.java:138)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.io.FileInputStream.<init>(FileInputStream.java:93)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.net.URL.openStream(URL.java:1067)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.jedit.help.HelpTOCLoader.loadTOC(HelpTOCLoader.java:166)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.jedit.help.HelpTOCLoader.createTOC(HelpTOCLoader.java:118)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.jedit.help.HelpTOCPanel$2.run(HelpTOCPanel.java:105)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.util.TaskManager$MyTask._run(TaskManager.java:258)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.util.Task.run(Task.java:65)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.lang.Thread.run(Thread.java:748)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader: java.io.FileNotFoundException: D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\doc\FAQ\toc.xml (The system cannot find the path specified)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.io.FileInputStream.open0(Native Method)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.io.FileInputStream.open(FileInputStream.java:195)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.io.FileInputStream.<init>(FileInputStream.java:138)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.io.FileInputStream.<init>(FileInputStream.java:93)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.net.URL.openStream(URL.java:1067)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.jedit.help.HelpTOCLoader.loadTOC(HelpTOCLoader.java:166)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.jedit.help.HelpTOCLoader.createTOC(HelpTOCLoader.java:119)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.jedit.help.HelpTOCPanel$2.run(HelpTOCPanel.java:105)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.util.TaskManager$MyTask._run(TaskManager.java:258)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at org.gjt.sp.util.Task.run(Task.java:65)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2:47:14 PM [jEdit Worker #0] [error] HelpTOCLoader:  at java.lang.Thread.run(Thread.java:748)
+2:47:14 PM [jEdit Worker #0] [notice] HelpTOCLoader: The API docs for jEdit will not be available (reinstall jEdit if you want them)
+2:47:14 PM [AWT-EventQueue-0] [debug] EditBus: EditorStarted[source=null]
+2:47:14 PM [AWT-EventQueue-0] [message] jEdit: Startup complete: 912 ms
+2:47:14 PM [AWT-EventQueue-0] [debug] EditBus: ViewUpdate[what=VIEW_ACTIVATED,source=org.gjt.sp.jedit.View[active]]
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2: java.io.FileNotFoundException: D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\doc\welcome.html (The system cannot find the path specified)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at java.io.FileInputStream.open0(Native Method)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at java.io.FileInputStream.open(FileInputStream.java:195)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at java.io.FileInputStream.<init>(FileInputStream.java:138)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at java.io.FileInputStream.<init>(FileInputStream.java:93)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at javax.swing.JEditorPane.getStream(JEditorPane.java:768)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at javax.swing.JEditorPane.setPage(JEditorPane.java:432)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at org.gjt.sp.jedit.help.HelpViewer$2.doInBackground(HelpViewer.java:327)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at org.gjt.sp.jedit.help.HelpViewer$2.doInBackground(HelpViewer.java:300)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at javax.swing.SwingWorker.run(SwingWorker.java:334)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2:47:14 PM [SwingWorker-pool-1-thread-1] [error] HelpViewer$2:  at java.lang.Thread.run(Thread.java:748)
+2:47:14 PM [AWT-EventQueue-0] [debug] JEditTextArea: InputMethodSupport is activated
+2:47:23 PM [AWT-EventQueue-0] [debug] EditBus: EditorExitRequested[source=org.gjt.sp.jedit.View[active]]
+2:47:23 PM [AWT-EventQueue-0] [message] PerspectiveManager: Saving D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\perspective.xml
+2:47:23 PM [AWT-EventQueue-0] [debug] EditBus: EditorExiting[source=null]
+2:47:23 PM [AWT-EventQueue-0] [debug] EditBus: ViewUpdate[what=CLOSED,source=org.gjt.sp.jedit.View[active]]
+2:47:23 PM [AWT-EventQueue-0] [debug] EditBus: EditPaneUpdate[what=DESTROYED,source=org.gjt.sp.jedit.EditPane[active]]
+2:47:23 PM [AWT-EventQueue-0] [debug] BufferSet: 1647981974: Buffer removed Untitled-1 (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\)
+2:47:23 PM [AWT-EventQueue-0] [debug] BufferSetManager: Buffer:Untitled-1 (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\) is in no bufferSet anymore, closing it
+2:47:23 PM [AWT-EventQueue-0] [debug] EditBus: PluginUpdate[what=UNLOADED,exit=true,version=5.0,source=D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\jars\QuickNotepad.jar,class=QuickNotepadPlugin]
+2:47:23 PM [AWT-EventQueue-0] [message] BufferHistory: Saving D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\recent.xml
+2:47:23 PM [AWT-EventQueue-0] [message] KillRing: Saving D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\killring.xml

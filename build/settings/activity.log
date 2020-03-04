@@ -1,0 +1,159 @@
+Log file created on Sat Feb 29 10:02:02 MST 2020
+IMPORTANT:
+Because updating this file after every log message would kill
+performance, it will be *incomplete* unless you invoke the
+Utilities->Troubleshooting->Update Activity Log on Disk command!
+10:02:01 AM [main] [message] Log: When reporting bugs, please include the following information:
+10:02:01 AM [main] [message] Log: java.version=1.8.0_231
+10:02:01 AM [main] [message] Log: java.vm.version=25.231-b11
+10:02:01 AM [main] [message] Log: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+10:02:01 AM [main] [message] Log: java.runtime.version=1.8.0_231-b11
+10:02:01 AM [main] [message] Log: java.runtime.name=Java(TM) SE Runtime Environment
+10:02:01 AM [main] [message] Log: java.vendor=Oracle Corporation
+10:02:01 AM [main] [message] Log: java.compiler=null
+10:02:01 AM [main] [message] Log: os.name=Windows 10
+10:02:01 AM [main] [message] Log: os.version=10.0
+10:02:01 AM [main] [message] Log: os.arch=amd64
+10:02:01 AM [main] [message] Log: user.home=C:\Users\Sanke
+10:02:01 AM [main] [message] Log: java.home=C:\Program Files (x86)\Java\jdk1.8.0_231\jre
+10:02:01 AM [main] [message] Log: java.class.path=D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\jedit.jar
+10:02:01 AM [main] [message] jEdit: starting with command line arguments: -settings=D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build/settings
+10:02:01 AM [main] [debug] jEdit: before splash screen activation:48 ms
+10:02:02 AM [main] [debug] jEdit: after splash screen activation:281 ms
+10:02:02 AM [main] [debug] MiscUtilities: Saving backup of file "D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\activity.log" to "D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\settings-backup\activity.log~1~"
+10:02:02 AM [main] [notice] jEdit: jEdit version 5.5.0
+10:02:02 AM [main] [message] jEdit: Settings directory is D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings
+10:02:02 AM [main] [message] jEdit: jEdit home directory is D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build
+10:02:02 AM [main] [debug] SplashScreen: init:14/154ms
+10:02:02 AM [main] [debug] SplashScreen: init system properties:18/172ms
+10:02:02 AM [main] [message] BeanShell: Beanshell Init
+10:02:02 AM [main] [debug] SplashScreen: init beanshell:31/203ms
+10:02:02 AM [main] [debug] SplashScreen: loading site properties:6/209ms
+10:02:02 AM [main] [debug] SplashScreen: loading user properties:2/211ms
+10:02:02 AM [main] [debug] GUIUtilities: Icon theme set to: tango
+10:02:02 AM [main] [debug] GUIUtilities: Loading icon theme from: jeditresource:/org/gjt/sp/jedit/icons/themes/tango/
+10:02:02 AM [main] [debug] SplashScreen: init GUI:3/214ms
+10:02:02 AM [main] [debug] EditServer: jEdit server started on port 58829
+10:02:02 AM [main] [debug] EditServer: Authorization key is 1015810538
+10:02:02 AM [main] [debug] SplashScreen: init server:4/218ms
+10:02:02 AM [main] [debug] jEdit: initPLAF non-edt old=javax.swing.plaf.metal.MetalLookAndFeel requested=null new=javax.swing.plaf.metal.MetalLookAndFeel
+10:02:02 AM [main] [debug] SplashScreen: init look and feel:3/221ms
+10:02:02 AM [main] [debug] SplashScreen: init VFS Manager:1/222ms
+10:02:02 AM [main] [debug] ActionSet: Loading actions from jar:file:/D:/User/SanketM/Dev/Github/cs515-001-s20-EvolutionaryRams-jedit2/build/jedit.jar!/org/gjt/sp/jedit/actions.xml
+10:02:02 AM [main] [debug] DockableWindowManager: Loading dockables from jar:file:/D:/User/SanketM/Dev/Github/cs515-001-s20-EvolutionaryRams-jedit2/build/jedit.jar!/org/gjt/sp/jedit/dockables.xml
+10:02:02 AM [main] [debug] SplashScreen: init resources:84/306ms
+10:02:02 AM [AWT-EventQueue-0] [debug] EditBus: SearchSettingsChanged[source=null]
+10:02:02 AM [main] [debug] SplashScreen: Migrate keymaps:46/352ms
+10:02:02 AM [main] [notice] jEdit: Loading plugins from D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\jars
+10:02:02 AM [AWT-EventQueue-0] [debug] EditBus: PluginUpdate[what=LOADED,exit=false,version=5.0,source=D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\jars\QuickNotepad.jar,class=QuickNotepadPlugin]
+10:02:02 AM [main] [notice] jEdit: Loading plugins from D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\jars
+10:02:02 AM [main] [debug] SplashScreen: init plugins:9/361ms
+10:02:02 AM [main] [message] HistoryModel: Loading history
+10:02:02 AM [main] [debug] SplashScreen: init history model:3/364ms
+10:02:02 AM [main] [message] BufferHistory: Loading D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\recent.xml
+10:02:02 AM [main] [debug] SplashScreen: init buffer history:3/367ms
+10:02:02 AM [main] [message] KillRing: Loading D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\killring.xml
+10:02:02 AM [main] [debug] SplashScreen: init killring:7/374ms
+10:02:02 AM [main] [debug] jEdit: initPLAF non-edt old=javax.swing.plaf.metal.MetalLookAndFeel requested=null new=javax.swing.plaf.metal.MetalLookAndFeel
+10:02:02 AM [main] [debug] jEdit: SOCKS proxy disabled
+10:02:02 AM [main] [debug] jEdit: HTTP proxy disabled
+10:02:02 AM [AWT-EventQueue-0] [debug] EditBus: PropertiesChanged[source=null]
+10:02:02 AM [main] [debug] SplashScreen: init various properties:51/425ms
+10:02:02 AM [main] [message] jEdit: Loading mode catalog file D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\modes\catalog
+10:02:02 AM [main] [message] jEdit: Loading mode catalog file D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\modes\catalog
+10:02:02 AM [main] [debug] SplashScreen: init modes:36/461ms
+10:02:02 AM [main] [debug] SplashScreen: activate plugins:3/464ms
+10:02:02 AM [main] [debug] Macros: Registered beanshell macro handler
+10:02:02 AM [AWT-EventQueue-0] [debug] EditBus: DynamicMenuChanged[menu=macros,source=null]
+10:02:02 AM [main] [debug] SplashScreen: init macros:13/477ms
+10:02:02 AM [main] [message] BeanShell: Running script D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\startup\startup.bsh
+10:02:02 AM [main] [notice] jEdit$5: Loading edit mode D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\modes\text.xml
+10:02:02 AM [main] [debug] String: BeanShell interpreter version 2.0b4-jedit
+10:02:02 AM [main] [debug] SplashScreen: run startup scripts:86/563ms
+10:02:02 AM [main] [debug] SplashScreen: run startup scripts:1/564ms
+10:02:02 AM [main] [debug] SplashScreen: run startup scripts:2/565ms
+10:02:02 AM [main] [debug] jEdit: main done:721 ms
+10:02:02 AM [AWT-EventQueue-0] [message] PerspectiveManager: Loading D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\perspective.xml
+10:02:02 AM [AWT-EventQueue-0] [debug] EditBus: BufferUpdate[what=PROPERTIES_CHANGED,view=null,source=CHANGES.txt (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\doc\)]
+10:02:02 AM [AWT-EventQueue-0] [debug] EditBus: BufferUpdate[what=CREATED,view=null,source=CHANGES.txt (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\doc\)]
+10:02:02 AM [AWT-EventQueue-0] [debug] EditBus: BufferUpdate[what=LOAD_STARTED,view=null,source=CHANGES.txt (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\doc\)]
+10:02:02 AM [AWT-EventQueue-0] [debug] EditBus: BufferUpdate[what=LOADED,view=null,source=CHANGES.txt (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\doc\)]
+10:02:02 AM [AWT-EventQueue-0] [debug] BufferSet: 1240866719: addBufferSetListener org.gjt.sp.jedit.EditPane[inactive]
+10:02:02 AM [AWT-EventQueue-0] [debug] EditBus: BufferChanging[what=BUFFER_CHANGING,source=org.gjt.sp.jedit.EditPane[inactive]]
+10:02:02 AM [AWT-EventQueue-0] [debug] BufferSet: 1240866719 addBufferAt(CHANGES.txt (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\doc\),-1)
+10:02:02 AM [AWT-EventQueue-0] [debug] BufferSet: 1240866719: Buffer added CHANGES.txt (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\doc\) at 0
+10:02:02 AM [AWT-EventQueue-0] [debug] EditBus: EditPaneUpdate[what=CREATED,source=org.gjt.sp.jedit.EditPane[inactive]]
+10:02:02 AM [AWT-EventQueue-0] [debug] BufferSet: 1240866719 addBufferAt(CHANGES.txt (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\doc\),0)
+10:02:02 AM [AWT-EventQueue-0] [debug] BufferSet: 1240866719 addBufferAt(CHANGES.txt (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\doc\),1)
+10:02:02 AM [AWT-EventQueue-0] [debug] EditBus: ViewUpdate[what=CREATED,source=org.gjt.sp.jedit.View[active]]
+10:02:03 AM [AWT-EventQueue-0] [debug] EditBus: EditorStarted[source=null]
+10:02:03 AM [AWT-EventQueue-0] [message] jEdit: Startup complete: 1187 ms
+10:02:03 AM [AWT-EventQueue-0] [debug] EditBus: ViewUpdate[what=VIEW_ACTIVATED,source=org.gjt.sp.jedit.View[active]]
+10:02:03 AM [AWT-EventQueue-0] [debug] JEditTextArea: InputMethodSupport is activated
+10:02:32 AM [AWT-EventQueue-0] [debug] MiscUtilities: Saving backup of file "D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\perspective.xml" to "D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\settings-backup\perspective.xml~1~"
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0: Exception in thread "AWT-EventQueue-0" 
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0: java.lang.NullPointerException
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at sun.awt.windows.WInputMethod$1.run(WInputMethod.java:592)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventQueue.access$500(EventQueue.java:97)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventQueue$3.run(EventQueue.java:709)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventQueue$3.run(EventQueue.java:703)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.security.AccessController.doPrivileged(Native Method)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventQueue$4.run(EventQueue.java:733)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventQueue$4.run(EventQueue.java:731)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.security.AccessController.doPrivileged(Native Method)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+10:03:58 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+10:03:58 AM [AWT-EventQueue-0] [debug] EditBus: ViewUpdate[what=VIEW_ACTIVATED,source=org.gjt.sp.jedit.View[active]]
+10:03:58 AM [AWT-EventQueue-0] [debug] jEdit: checkBufferStatus for all buffers
+10:03:58 AM [AWT-EventQueue-0] [debug] EditBus: DynamicMenuChanged[menu=recent-files,source=null]
+10:04:05 AM [AWT-EventQueue-0] [debug] EditBus: ViewUpdate[what=VIEW_ACTIVATED,source=org.gjt.sp.jedit.View[active]]
+10:04:05 AM [AWT-EventQueue-0] [debug] jEdit: checkBufferStatus for all buffers
+10:04:05 AM [AWT-EventQueue-0] [debug] EditBus: DynamicMenuChanged[menu=recent-files,source=null]
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0: Exception in thread "AWT-EventQueue-0" 
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0: java.lang.NullPointerException
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at sun.awt.windows.WInputMethod$1.run(WInputMethod.java:592)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventQueue.access$500(EventQueue.java:97)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventQueue$3.run(EventQueue.java:709)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventQueue$3.run(EventQueue.java:703)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.security.AccessController.doPrivileged(Native Method)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventQueue$4.run(EventQueue.java:733)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventQueue$4.run(EventQueue.java:731)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.security.AccessController.doPrivileged(Native Method)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+10:04:05 AM [AWT-EventQueue-0] [error] AWT-EventQueue-0:  at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+10:04:07 AM [AWT-EventQueue-0] [debug] EditBus: EditorExitRequested[source=org.gjt.sp.jedit.View[active]]
+10:04:07 AM [AWT-EventQueue-0] [message] PerspectiveManager: Saving D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\perspective.xml
+10:04:07 AM [AWT-EventQueue-0] [debug] MiscUtilities: Saving backup of file "D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\perspective.xml" to "D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\settings-backup\perspective.xml~1~"
+10:04:07 AM [AWT-EventQueue-0] [debug] EditBus: DynamicMenuChanged[menu=recent-files,source=null]
+10:04:07 AM [AWT-EventQueue-0] [debug] EditBus: EditorExiting[source=null]
+10:04:07 AM [AWT-EventQueue-0] [debug] EditBus: ViewUpdate[what=CLOSED,source=org.gjt.sp.jedit.View[active]]
+10:04:07 AM [AWT-EventQueue-0] [debug] EditBus: DynamicMenuChanged[menu=recent-files,source=null]
+10:04:07 AM [AWT-EventQueue-0] [debug] EditBus: EditPaneUpdate[what=DESTROYED,source=org.gjt.sp.jedit.EditPane[active]]
+10:04:07 AM [AWT-EventQueue-0] [debug] BufferSet: 1240866719: Buffer removed CHANGES.txt (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\doc\)
+10:04:07 AM [AWT-EventQueue-0] [debug] BufferSetManager: Buffer:CHANGES.txt (D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\doc\) is in no bufferSet anymore, closing it
+10:04:07 AM [AWT-EventQueue-0] [debug] EditBus: PluginUpdate[what=UNLOADED,exit=true,version=5.0,source=D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\jars\QuickNotepad.jar,class=QuickNotepadPlugin]
+10:04:07 AM [AWT-EventQueue-0] [message] BufferHistory: Saving D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\recent.xml
+10:04:07 AM [AWT-EventQueue-0] [debug] MiscUtilities: Saving backup of file "D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\recent.xml" to "D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\settings-backup\recent.xml~1~"
+10:04:07 AM [AWT-EventQueue-0] [message] KillRing: Saving D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\killring.xml
+10:04:07 AM [AWT-EventQueue-0] [debug] MiscUtilities: Saving backup of file "D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\killring.xml" to "D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\settings-backup\killring.xml~1~"
+10:04:07 AM [AWT-EventQueue-0] [debug] MiscUtilities: Saving backup of file "D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\properties" to "D:\User\SanketM\Dev\Github\cs515-001-s20-EvolutionaryRams-jedit2\build\settings\settings-backup\properties~1~"

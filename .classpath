@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="test/" kind="src" path=""/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="lib" path="D:/Program Files/apache-ant-1.9.14/lib/ant.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jdk1.8.0_231/lib/tools.jar"/>
+	<classpathentry kind="lib" path="D:/User/SanketM/Downloads/Sem2/CS515/jEdit/jsr305-3.0.2.jar"/>
+	<classpathentry kind="lib" path="D:/User/SanketM/Dev/Github/cs515-001-s20-EvolutionaryRams-jedit2/build/jedit.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

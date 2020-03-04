@@ -594,9 +594,12 @@ public class HyperSearchResults extends JPanel implements DefaultFocusComponent
 					m = matcher.nextMatch(s.substring(i), true, true, true, false);
 				} catch (InterruptedException e) {
 					Thread.currentThread().interrupt();
-				} finally {
-					m = null;
 				}
+				//START : Sanket M, Nada A, 3 March 2020 Comment out the above finally if you want to highlight the right text
+//				finally {
+//					m = null;
+//				}
+				//END: Sanket M, Nada A, 3 March 2020 Comment out the above finally if you want to highlight the right text
 			}
 			return HtmlUtilities.highlightString(s, styleTag, matches);
 		}
