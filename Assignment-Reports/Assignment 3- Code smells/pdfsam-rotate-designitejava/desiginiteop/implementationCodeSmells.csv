@@ -1,0 +1,27 @@
+Project Name,Package Name,Type Name,Method Name,Code Smell
+.,org.pdfsam.rotate,RotateModule,settingPanel,Long Statement
+.,org.pdfsam.rotate,RotateOptionsPane,RotateOptionsPane,Long Statement
+.,org.pdfsam.rotate,RotateOptionsPane,RotateOptionsPane,Long Statement
+.,org.pdfsam.rotate,RotateOptionsPane,RotateOptionsPane,Long Statement
+.,org.pdfsam.rotate,RotateOptionsPane,RotateOptionsPane,Long Statement
+.,org.pdfsam.rotate,RotateOptionsPane,RotateOptionsPane,Long Statement
+.,org.pdfsam.rotate,RotateOptionsPane,RotateOptionsPane,Long Statement
+.,org.pdfsam.rotate,RotateOptionsPane,saveStateTo,Long Statement
+.,org.pdfsam.rotate,RotateOptionsPane,saveStateTo,Long Statement
+.,org.pdfsam.rotate,RotateOptionsPane,restoreStateFrom,Long Statement
+.,org.pdfsam.rotate,RotateOptionsPane,restoreStateFrom,Long Statement
+.,org.pdfsam.rotate,RotateSelectionPane,RotateSelectionPane,Long Statement
+.,org.pdfsam.rotate,RotateSelectionPane,apply,Long Statement
+.,org.pdfsam.rotate,RotateOptionsPaneTest,restoreStateFrom,Magic Number
+.,org.pdfsam.rotate,RotateOptionsPaneTest,reset,Magic Number
+.,org.pdfsam.rotate,RotateOptionsPaneTest,reset,Magic Number
+.,org.pdfsam.rotate,RotateParametersBuilderTest,buildDefaultSelection,Magic Number
+.,org.pdfsam.rotate,RotateParametersBuilderTest,buildDefaultSelection,Magic Number
+.,org.pdfsam.rotate,RotateParametersBuilderTest,buildRanges,Magic Number
+.,org.pdfsam.rotate,RotateParametersBuilderTest,buildRanges,Magic Number
+.,org.pdfsam.rotate,RotateParametersBuilderTest,buildRanges,Magic Number
+.,org.pdfsam.rotate,RotateParametersBuilderTest,buildRanges,Magic Number
+.,org.pdfsam.rotate,RotateParametersBuilderTest,buildMultiple,Magic Number
+.,org.pdfsam.rotate,RotateParametersBuilderTest,buildMultiple,Magic Number
+.,org.pdfsam.rotate,RotateParametersBuilderTest,buildMultiple,Magic Number
+.,org.pdfsam.rotate,RotateSelectionPaneTest,notEmptyPageSelection,Magic Number

@@ -1,0 +1,11 @@
+Project Name,Package Name,Type Name,Code Smell
+.,org.pdfsam.rotate,RotateModule,Unutilized Abstraction
+.,org.pdfsam.rotate,ModuleConfig,Unutilized Abstraction
+.,org.pdfsam.rotate,RotateOptionsPaneTest,Unutilized Abstraction
+.,org.pdfsam.rotate,RotateOptionsPaneTest,Deficient Encapsulation
+.,org.pdfsam.rotate,RotateParametersBuilderTest,Unutilized Abstraction
+.,org.pdfsam.rotate,RotateParametersBuilderTest,Deficient Encapsulation
+.,org.pdfsam.rotate,RotateSelectionPaneTest,Unutilized Abstraction
+.,org.pdfsam.rotate,RotateSelectionPaneTest,Deficient Encapsulation
+.,org.pdfsam,Cycles,Unnecessary Abstraction
+.,org.pdfsam,Cycles,Unutilized Abstraction

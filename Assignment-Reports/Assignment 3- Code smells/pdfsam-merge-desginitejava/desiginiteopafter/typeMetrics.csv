@@ -1,0 +1,10 @@
+Project Name,Package Name,Type Name,NOF,NOPF,NOM,NOPM,LOC,WMC,NC,DIT,LCOM,FANIN,FANOUT
+.,org.pdfsam.merge,MergeModule,6,0,13,11,74,14,0,0,0.230769231,0,3
+.,org.pdfsam.merge,ModuleConfig,0,0,4,4,14,4,0,0,-1,0,0
+.,org.pdfsam.merge,MergeOptionsPane,6,0,5,4,91,5,0,0,0,2,1
+.,org.pdfsam.merge,MergeParametersBuilder,8,0,10,2,62,11,0,0,0,6,0
+.,org.pdfsam.merge,MergeSelectionPane,1,0,2,2,22,3,0,0,1,2,1
+.,org.pdfsam.merge,MergeOptionsPaneTest,4,1,6,6,92,6,0,0,0,0,2
+.,org.pdfsam.merge,MergeParametersBuilderTest,1,1,1,1,36,1,0,0,0,0,1
+.,org.pdfsam.merge,MergeSelectionPaneTest,7,3,7,6,61,7,0,0,0,0,2
+.,org.pdfsam,Cycles,0,0,0,0,5,0,0,0,-1,0,0

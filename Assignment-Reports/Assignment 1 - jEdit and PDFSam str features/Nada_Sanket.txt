@@ -1,0 +1,39 @@
+A1 score = sum(PDFsam, jEdit) - penalties = sum(4.5, 3.5) - 1.2 = 8 - 1.2 = 6.8
+
+** PDFSam **
+
+	Internal Structure (2/2)
+		+ General description of the projects and their content. 
+
+	Bug report (0.5/1)
+		- Bug 1: Could not be reproduced in installer version. When following the steps to reproduce, the result is a pop up with a message pointing to incorrect bookmark level.
+		- Bug 2: Could not be reproduced in installer version. The described actions are properly handled in installer version.
+		+ Extra points for including short description, steps to reproduce, expected behavior, observed behavior (including stack traces), and screenshots.
+
+	New features (2/2)
+		+ Great ideas described with usage scenarios. Very useful!
+
+	Score: 4.5
+
+** jEdit **
+
+	Internal Structure (2/2)
+		+ General description of the packages and their content. 
+
+	Bug report (0.5/1)
+		- Bug 1: Invalid. Could not be reproduced in installer version.
+		- Bug 2: Invalid. Could not be reproduced in installer version.
+		+ Extra points for including short description, steps to reproduce, expected behavior, observed behavior (including stack traces), and screenshots.
+
+	New features (1/2)
+		+ Feature 1: Good job.
+		- Feature 2: Already implemented in jEdit (Edit > Source > Range Comment, Edit > Source > Line Comment). Shortcuts are also associated to those actions.
+
+	Score: 3.5
+	
+** Penalties **
+
+	Late submission: 15%
+
+
+

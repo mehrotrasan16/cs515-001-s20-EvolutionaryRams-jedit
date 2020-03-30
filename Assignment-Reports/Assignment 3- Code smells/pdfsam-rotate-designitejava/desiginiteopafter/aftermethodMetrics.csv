@@ -1,0 +1,12 @@
+Type Name,MethodName,LOC,CC,PC,,Mod. LOC,Mod. CC,Mod. PC
+RotateParametersBuilder,addInput,37,9,2,,8,2,2
+RotateParametersBuilder,accept,7,3,1,,,,
+RotateParametersBuilder,accept,7,3,1,,,,
+RotateParametersBuilder,hasInput,3,1,0,,3,1,0
+RotateParametersBuilder,output,3,1,1,,3,1,1
+RotateParametersBuilder,prefix,3,1,1,,3,1,1
+RotateParametersBuilder,getOutput,3,1,0,,3,1,0
+RotateParametersBuilder,getPrefix,3,1,0,,3,1,0
+RotateParametersBuilder,rotation,3,1,1,,3,1,1
+RotateParametersBuilder,rotationType,3,1,1,,3,1,1
+RotateParametersBuilder,build,10,1,0,,10,1,0

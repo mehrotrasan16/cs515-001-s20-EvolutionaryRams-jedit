@@ -1,0 +1,11 @@
+Project Name,Package Name,Type Name,MethodName,LOC,CC,PC,,Mod. LOC,Mod. CC,Mod. PC
+.,org.pdfsam.merge,MergeParametersBuilder,addInput,3,1,1,,9,2,1
+.,org.pdfsam.merge,MergeParametersBuilder,hasInput,3,1,0,,3,1,0
+.,org.pdfsam.merge,MergeParametersBuilder,outlinePolicy,3,1,1,,3,1,1
+.,org.pdfsam.merge,MergeParametersBuilder,blankPageIfOdd,3,1,1,,3,1,1
+.,org.pdfsam.merge,MergeParametersBuilder,footer,3,1,1,,3,1,1
+.,org.pdfsam.merge,MergeParametersBuilder,normalize,3,1,1,,3,1,1
+.,org.pdfsam.merge,MergeParametersBuilder,acroFormsPolicy,3,1,1,,3,1,1
+.,org.pdfsam.merge,MergeParametersBuilder,tocPolicy,3,1,1,,3,1,1
+.,org.pdfsam.merge,MergeParametersBuilder,output,3,1,1,,3,1,1
+.,org.pdfsam.merge,MergeParametersBuilder,build,15,1,0,,15,1,0

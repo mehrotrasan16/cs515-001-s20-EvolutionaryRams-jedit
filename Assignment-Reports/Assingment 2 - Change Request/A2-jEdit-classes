@@ -1,0 +1,14 @@
+jEdit change Requests
+
+Eclipse -> open debugging perspective
+then f5 - step in
+f6 - step over/to next without stepping in
+f7 - if you've accidentaly stepped in too deep then to step back one level
+
+Default Log directory : C:\Users\Sanke\AppData\Roaming\jEdit\activity.log
+
+Text Area - > to get careet information - > gethorizontaloffset
+TextArea - jEditbuffer - linemanager
+but linemanager is internal -> no changes allowed
+buffer is its wrapper which makes it thread safe.
+

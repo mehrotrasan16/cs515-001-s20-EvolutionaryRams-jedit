@@ -1,0 +1,10 @@
+Project Name,Package Name,Type Name,NOF,NOPF,NOM,NOPM,LOC,WMC,NC,DIT,LCOM,FANIN,FANOUT
+.,org.pdfsam.rotate,RotateModule,7,0,14,12,87,15,0,0,0.214285714,0,3
+.,org.pdfsam.rotate,ModuleConfig,0,0,5,5,17,5,0,0,-1,0,0
+.,org.pdfsam.rotate,RotateOptionsPane,2,0,5,4,39,5,0,0,0,2,1
+.,org.pdfsam.rotate,RotateParametersBuilder,5,0,11,7,79,23,0,0,0.272727273,6,0
+.,org.pdfsam.rotate,RotateSelectionPane,1,0,2,2,22,3,0,0,1,2,1
+.,org.pdfsam.rotate,RotateOptionsPaneTest,2,1,5,5,50,5,0,0,0,0,2
+.,org.pdfsam.rotate,RotateParametersBuilderTest,2,1,4,4,60,4,0,0,0,0,1
+.,org.pdfsam.rotate,RotateSelectionPaneTest,7,3,7,6,61,7,0,0,0,0,2
+.,org.pdfsam,Cycles,0,0,0,0,5,0,0,0,-1,0,0

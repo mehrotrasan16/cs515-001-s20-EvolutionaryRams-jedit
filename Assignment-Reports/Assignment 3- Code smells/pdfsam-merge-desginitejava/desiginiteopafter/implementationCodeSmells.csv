@@ -1,0 +1,25 @@
+Project Name,Package Name,Type Name,Method Name,Code Smell
+.,org.pdfsam.merge,MergeModule,settingPanel,Long Statement
+.,org.pdfsam.merge,MergeOptionsPane,MergeOptionsPane,Long Statement
+.,org.pdfsam.merge,MergeOptionsPane,MergeOptionsPane,Long Statement
+.,org.pdfsam.merge,MergeOptionsPane,MergeOptionsPane,Long Statement
+.,org.pdfsam.merge,MergeOptionsPane,MergeOptionsPane,Long Statement
+.,org.pdfsam.merge,MergeOptionsPane,MergeOptionsPane,Magic Number
+.,org.pdfsam.merge,MergeOptionsPane,MergeOptionsPane,Magic Number
+.,org.pdfsam.merge,MergeOptionsPane,MergeOptionsPane,Magic Number
+.,org.pdfsam.merge,MergeOptionsPane,MergeOptionsPane,Magic Number
+.,org.pdfsam.merge,MergeOptionsPane,MergeOptionsPane,Magic Number
+.,org.pdfsam.merge,MergeOptionsPane,MergeOptionsPane,Magic Number
+.,org.pdfsam.merge,MergeOptionsPane,MergeOptionsPane,Magic Number
+.,org.pdfsam.merge,MergeOptionsPane,saveStateTo,Long Statement
+.,org.pdfsam.merge,MergeOptionsPane,saveStateTo,Long Statement
+.,org.pdfsam.merge,MergeOptionsPane,saveStateTo,Long Statement
+.,org.pdfsam.merge,MergeOptionsPane,restoreStateFrom,Long Statement
+.,org.pdfsam.merge,MergeOptionsPane,restoreStateFrom,Long Statement
+.,org.pdfsam.merge,MergeOptionsPane,restoreStateFrom,Long Statement
+.,org.pdfsam.merge,MergeSelectionPane,MergeSelectionPane,Long Statement
+.,org.pdfsam.merge,MergeSelectionPane,apply,Long Statement
+.,org.pdfsam.merge,MergeOptionsPaneTest,restoreStateFrom,Magic Number
+.,org.pdfsam.merge,MergeOptionsPaneTest,reset,Magic Number
+.,org.pdfsam.merge,MergeOptionsPaneTest,reset,Magic Number
+.,org.pdfsam.merge,MergeSelectionPaneTest,notEmptyPageSelection,Magic Number

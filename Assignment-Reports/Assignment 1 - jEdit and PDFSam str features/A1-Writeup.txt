@@ -1,0 +1,43 @@
+CS515 Assignment 1
+
+GOALS:
+get familiar with two open-source software projects
+jEdit, a free and open-source mature text editor; 
+and PDFsam, a free and open-source application to manage PDF files
+
+Use the systems
+go through the source code
+gain knowledge on the features they provide
+their internal and external design
+their coding style
+
+i. To introduce students to active, medium-sized, open-source software systems;
+ii. To provide students with the opportunity to become familiar with software systems that will be used in
+upcoming assignments; and
+iii. To introduce students to change request writing
+
+download their sources, deploy them locally, 
+ and navigate the code to get an insight on their design,
+ main modules,
+ dependencies, 
+ test suites and technologies, 
+ code style, etc.
+
+Deliverables:
+The deliverable of this assignment is a report that for each software system describes:
+1. Its overall internal design. You could, for example, provide an overview of the purpose of projects and
+packages composing the system.
+2. At least one bug (i.e., unexpected behavior) that you experienced while using the application. Provide as
+many details as possible. At the minimum, you should include: observed behavior, expected behavior and
+steps to reproduce. Stack traces (if they exist) and screenshots are recommended.
+3. At least two new features that you would like to see implemented in the application. Once again, provide as
+many details as possible. Include adapted screenshots if they make your feature request clearer
+
+What we did:
+check their websites and search for documents related to features and usage
+executed as many features as possible to find bugs, not all just enough
+download their sources, deploy them locally, 
+and navigate the code to get an insight on their design,
+listed their packages with a short summary of what each package does
+
+
