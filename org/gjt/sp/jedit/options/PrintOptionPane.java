@@ -72,9 +72,13 @@ public class PrintOptionPane extends AbstractOptionPane
 		/* Tab size */
 		// DONE: make sure this can only accept positive numbers, added
 		// NumericTextField as the combobox editor.
+ 
 		String[] tabSizes = { "2", "4", "8" };
 		tabSize = new JComboBox<String>(tabSizes);
-		tabSize.setEditor(new NumericTextField("", true, true));
+		   // Start: Nada, Sanket M
+			NumericTextField n= new NumericTextField();
+		tabSize.setEditor(n.new Values("", true, true));
+		// end: Nada, Sanket M
 		tabSize.setEditable(true);
 		tabSize.setSelectedItem(jEdit.getProperty("print.tabSize"));
 		addComponent(jEdit.getProperty("options.print.tabSize"), tabSize);
