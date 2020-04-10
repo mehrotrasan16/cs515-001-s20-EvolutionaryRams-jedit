@@ -44,6 +44,7 @@ import org.gjt.sp.jedit.View;
 import org.gjt.sp.jedit.browser.VFSBrowser;
 import org.gjt.sp.jedit.gui.FontSelector;
 import org.gjt.sp.jedit.gui.NumericTextField;
+import org.gjt.sp.jedit.gui.NumericTextField.Values;
 import org.gjt.sp.jedit.gui.VariableGridLayout;
 import org.gjt.sp.jedit.jEdit;
 import org.gjt.sp.util.GenericGUIUtilities;
@@ -76,7 +77,10 @@ public class PrinterDialog extends JDialog implements ListSelectionListener
     private PageSetupPanel pageSetupPanel;
     public static int onlyPrintPages = PrintRangeType.ALL.getValue();
     private DocFlavor DOC_FLAVOR = DocFlavor.SERVICE_FORMATTED.PRINTABLE;
-
+    
+   // Start: Nada A, Sanket M
+    NumericTextField n= new NumericTextField(); 
+   // end Nada, Sanket M
 
     public PrinterDialog( View owner, PrintRequestAttributeSet attributes, boolean pageSetupOnly )
     {
@@ -1006,10 +1010,10 @@ public class PrinterDialog extends JDialog implements ListSelectionListener
 
         private JComboBox<String> onlyPrint;
         private JComboBox<String> outputTray;
-        NumericTextField topMarginField;
-        NumericTextField leftMarginField;
-        NumericTextField rightMarginField;
-        NumericTextField bottomMarginField;
+        Values topMarginField;
+        Values leftMarginField;
+        Values rightMarginField;
+        Values bottomMarginField;
 
 
         public PageSetupPanel()
@@ -1078,11 +1082,13 @@ public class PrinterDialog extends JDialog implements ListSelectionListener
             String leftMargin = jEdit.getProperty("print.leftMargin", unitIsMM ? "25" : "1.0");
             String rightMargin = jEdit.getProperty("print.rightMargin", unitIsMM ? "25" : "1.0");
             String bottomMargin = jEdit.getProperty("print.bottomMargin", unitIsMM ? "25" : "1.0");
-            topMarginField = new NumericTextField( topMargin, true, unitIsMM );
-            leftMarginField = new NumericTextField( leftMargin, true, unitIsMM );
-            rightMarginField = new NumericTextField( rightMargin, true, unitIsMM );
-            bottomMarginField = new NumericTextField( bottomMargin, true, unitIsMM );
-
+            
+            // Start: Nada A, Sanket M
+            topMarginField = n.new Values( topMargin, true, unitIsMM );
+            leftMarginField = n.new Values( leftMargin, true, unitIsMM );
+            rightMarginField = n.new Values( rightMargin, true, unitIsMM );
+            bottomMarginField = n.new Values( bottomMargin, true, unitIsMM );
+            // end: Nada, Sanket M
             String unitsLabel = unitIsMM ? " (mm)" : " (in)";
             marginPanel.add( new JLabel( jEdit.getProperty( "print.dialog.Top", "Top" ) + unitsLabel ) );
             marginPanel.add( topMarginField );
@@ -1443,10 +1449,15 @@ public class PrinterDialog extends JDialog implements ListSelectionListener
             float[] marginValues = margins == null ? minMargins : margins.getMargins( units );
 
             // set the margin text area values
-            NumericTextField[] numberFields = new NumericTextField[] {topMarginField, leftMarginField, rightMarginField, bottomMarginField};
+            //Start: Nada A , Sanket M
+            Values[] numberFields = new Values[] {topMarginField, leftMarginField, rightMarginField, bottomMarginField};
+            // end 
             for ( int i = 0; i < numberFields.length; i++ )
             {
-                NumericTextField field = numberFields[i];
+            	
+            	//Start: Nada A , Sanket M
+            	Values field = numberFields[i];
+            	// end 
                 Float currentUserMargin = null;
                 String text = field.getText();
                 if ( text != null && !text.isEmpty() )
@@ -1854,7 +1865,7 @@ public class PrinterDialog extends JDialog implements ListSelectionListener
             /* Tab size */
             String[] tabSizes = {"2", "4", "8"};
             tabSize = new JComboBox<String>( tabSizes );
-            tabSize.setEditor( new NumericTextField( "", true, true ) );
+            tabSize.setEditor(n.new Values( "", true, true ) );
             tabSize.setEditable( true );
             tabSize.setSelectedItem( jEdit.getProperty( "print.tabSize" ) );
 
