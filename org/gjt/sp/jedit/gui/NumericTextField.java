@@ -29,8 +29,6 @@ import javax.swing.text.AbstractDocument;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DocumentFilter;
-import javax.swing.text.DocumentFilter.FilterBypass;
-
 import org.gjt.sp.jedit.jEdit;
 import org.gjt.sp.jedit.syntax.SyntaxStyle;
 import org.gjt.sp.util.SyntaxUtilities;
@@ -43,13 +41,20 @@ import org.gjt.sp.util.SyntaxUtilities;
  */
 public class NumericTextField extends JTextField implements ComboBoxEditor
 {
-	private final boolean positiveOnly;
-	private final boolean integerOnly;
-	private Number minValue;
-	private Number maxValue;
+	
+	// Start: Nada A, 4 April, 2020, object created from Extracted class
+
+	private Values val = new Values();
+	
+	// end 
+	
 	private SyntaxStyle invalidStyle;
 	private Color defaultBackground;
 	private Color defaultForeground;
+	
+	public NumericTextField()
+	{
+	}
 	
 	public NumericTextField(String text)
 	{
@@ -59,62 +64,30 @@ public class NumericTextField extends JTextField implements ComboBoxEditor
 	public NumericTextField(String text, boolean positiveOnly)
 	{
 		super(text);
-		this.positiveOnly = positiveOnly;
-		integerOnly = true;
-		minValue = positiveOnly ? new Integer(0) : Integer.MIN_VALUE;
-		maxValue = Integer.MAX_VALUE;
-		addFilter();
+
 		loadInvalidStyle();
 	}
 	
 	public NumericTextField(String text, boolean positiveOnly, boolean integerOnly)
 	{
 		super(text);
-		this.positiveOnly = positiveOnly;
-		this.integerOnly = integerOnly;
-		if (integerOnly)
-		{
-			minValue = positiveOnly ? new Integer(0) : Integer.MIN_VALUE;
-			maxValue = Integer.MAX_VALUE;
-		}
-		else 
-		{
-			minValue = positiveOnly ? new Float(0.0) : Float.MIN_VALUE;
-			maxValue = Float.MAX_VALUE;
-		}
-		addFilter();
+
+		loadInvalidStyle();
+	}
+	public NumericTextField(String text, int columns, boolean positiveOnly, boolean integerOnly)
+	{
+		super(text, columns);
+
 		loadInvalidStyle();
 	}
 	
 	public NumericTextField(String text, int columns, boolean positiveOnly) 
 	{
 		super(text, columns);
-		this.positiveOnly = positiveOnly;
-		integerOnly = true;
-		minValue = positiveOnly ? new Integer(0) : Integer.MIN_VALUE;
-		maxValue = Integer.MAX_VALUE;
-		addFilter();
 		loadInvalidStyle();
 	}
 	
-	public NumericTextField(String text, int columns, boolean positiveOnly, boolean integerOnly)
-	{
-		super(text, columns);
-		this.positiveOnly = positiveOnly;
-		this.integerOnly = integerOnly;
-		if (integerOnly)
-		{
-			minValue = positiveOnly ? new Integer(0) : Integer.MIN_VALUE;
-			maxValue = Integer.MAX_VALUE;
-		}
-		else 
-		{
-			minValue = positiveOnly ? new Float(0.0) : Float.MIN_VALUE;
-			maxValue = Float.MAX_VALUE;
-		}
-		addFilter();
-		loadInvalidStyle();
-	}
+
 	
 	private void loadInvalidStyle()
 	{
@@ -126,89 +99,8 @@ public class NumericTextField extends JTextField implements ComboBoxEditor
 		defaultBackground = getBackground();
 	}
 	
-	// set the minimum allowed value for this text field. If this NumericTextField
-	// was constructed with positive only, then values less than zero are ignored.
-	public void setMinValue(Number n)
-	{
-		if (positiveOnly)
-		{
-			float f = n.floatValue();
-			if (f < 0.0)
-				return;
-		}
-		
-		if (integerOnly)
-		{
-			int i = n.intValue();
-			int max = maxValue.intValue();
-			if (i > max)
-				return;
-		}
-		else 
-		{
-			float f = n.floatValue();
-			float max = maxValue.floatValue();
-			if (f > max)
-				return;
-		}
-		minValue = n;
-	}
-	
-	// set the maximum allowed value for this text field. If this NumericTextField
-	// was constructed with positive only, then values less than zero are ignored.
-	public void setMaxValue(Number n)
-	{
-		if (positiveOnly)
-		{
-			float f = n.floatValue();
-			if (f < 0)
-				return;
-		}
-		
-		if (integerOnly)
-		{
-			int i = n.intValue();
-			int min = minValue.intValue();
-			if (i < min)
-				return;
-		}
-		else 
-		{
-			float f = n.floatValue();
-			float min = minValue.floatValue();
-			if (f < min)
-				return;
-		}
-		maxValue = n;
-	}
-	
-	/**
-  	 * 	@return The value of the text field as either an Integer or a Float, 
- 	 * 	depending on whether this text field allows Integers or Floats.
- 	 */
-	public Number getValue()
-	{
-		if (integerOnly)
-			return Integer.valueOf(getText());
-		else
-			return Float.valueOf(getText());
-	}
-	
-	// add an Integer or Float document filter as appropriate
-    private void addFilter() {
-    	if (integerOnly)
-    		( ( AbstractDocument ) this.getDocument() ).setDocumentFilter( new IntegerDocumentFilter() );
-    	else
-    		( ( AbstractDocument ) this.getDocument() ).setDocumentFilter( new FloatDocumentFilter() );
-    	
-    	// apply the filter to the current value
-    	try 
-    	{
-    		String text = getText();
-    		((AbstractDocument)getDocument()).getDocumentFilter().replace(null, 0, text.length(), text, null); 
-		}
-		catch(Exception e) {}	// NOPMD
-    }
+
+
 
     class IntegerDocumentFilter extends DocumentFilter {
         public void insertString( FilterBypass fb, int offset, String string, AttributeSet attr )
@@ -254,7 +146,7 @@ public class NumericTextField extends JTextField implements ComboBoxEditor
 			super.replace( fb, offset, length, text, attrs );
         }
 
-        private boolean isInteger( String string ) 
+        public boolean isInteger( String string ) 
         {
         	if (string == null || string.isEmpty())
         	{
@@ -262,7 +154,7 @@ public class NumericTextField extends JTextField implements ComboBoxEditor
         	}
         	try 
         	{
-        		if (!positiveOnly && "-".equals(string))
+        		if (!val.positiveOnly && "-".equals(string))
         		{
         			return true;	
         		}
@@ -282,7 +174,7 @@ public class NumericTextField extends JTextField implements ComboBoxEditor
         		return false;	
         	}
             int value = Integer.parseInt( string );
-            return value <= maxValue.intValue() && value >= minValue.intValue();
+            return value <= val.maxValue.intValue() && value >= val.minValue.intValue();
         }
     }
 	
@@ -342,7 +234,7 @@ public class NumericTextField extends JTextField implements ComboBoxEditor
         		{
         			return true;	
         		}
-        		if (!positiveOnly && "-".equals(string))
+        		if (!val.positiveOnly && "-".equals(string))
         		{
         			return true;	
         		}
@@ -366,7 +258,7 @@ public class NumericTextField extends JTextField implements ComboBoxEditor
 				return true;	
 			}
             float value = Float.parseFloat( string );
-            boolean toReturn = value <= maxValue.floatValue() && value >= minValue.floatValue();
+            boolean toReturn = value <= val.maxValue.floatValue() && value >= val.minValue.floatValue();
             return toReturn;
         }
     }
@@ -390,4 +282,175 @@ public class NumericTextField extends JTextField implements ComboBoxEditor
 			setText(item.toString());
 	}
 	//}}}
+	
+	
+	public class  Values extends JTextField implements ComboBoxEditor   {
+		public boolean positiveOnly;
+		public boolean integerOnly;
+		public Number minValue;
+		public Number maxValue;
+
+		public Values() {
+		}
+		
+		public Values(String text, boolean positiveOnly)
+		{
+			super(text);
+			this.positiveOnly = positiveOnly;
+			this.integerOnly = true;
+			this.minValue = positiveOnly ? new Integer(0) : Integer.MIN_VALUE;
+			this.maxValue = Integer.MAX_VALUE;
+			this.addFilter();
+		}
+		public Values(String text, boolean positiveOnly, boolean integerOnly)
+		{
+			super(text);
+			this.positiveOnly = positiveOnly;
+			this.integerOnly = integerOnly;
+			if (integerOnly)
+			{
+				minValue = positiveOnly ? new Integer(0) : Integer.MIN_VALUE;
+				maxValue = Integer.MAX_VALUE;
+			}
+			else 
+			{
+				minValue = positiveOnly ? new Float(0.0) : Float.MIN_VALUE;
+			    maxValue = Float.MAX_VALUE;
+			}
+			addFilter();
+		}
+		
+		public Values(String text, int columns, boolean positiveOnly, boolean integerOnly)
+		{
+			super(text, columns);
+			this.positiveOnly = positiveOnly;
+			this.integerOnly = integerOnly;
+			if (integerOnly)
+			{
+				minValue = positiveOnly ? new Integer(0) : Integer.MIN_VALUE;
+				maxValue = Integer.MAX_VALUE;
+			}
+			else 
+			{
+				minValue = positiveOnly ? new Float(0.0) : Float.MIN_VALUE;
+				maxValue = Float.MAX_VALUE;
+			}
+			addFilter();
+		}
+		
+		public Values(String text, int columns, boolean positiveOnly) 
+		{
+			super(text, columns);
+			this.positiveOnly = positiveOnly;
+			this.integerOnly = true;
+			this.minValue = positiveOnly ? new Integer(0) : Integer.MIN_VALUE;
+			this.maxValue = Integer.MAX_VALUE;
+			this.addFilter();
+		}
+		// set the minimum allowed value for this text field. If this NumericTextField
+		// was constructed with positive only, then values less than zero are ignored.
+		public void setMinValue(Number n)
+		{
+			if (positiveOnly)
+			{
+				float f = n.floatValue();
+				if (f < 0.0)
+					return;
+			}
+			
+			if (integerOnly)
+			{
+				int i = n.intValue();
+				int max = maxValue.intValue();
+				if (i > max)
+					return;
+			}
+			else 
+			{
+				float f = n.floatValue();
+				float max =maxValue.floatValue();
+				if (f > max)
+					return;
+			}
+			minValue = n;
+		}
+		// set the maximum allowed value for this text field. If this NumericTextField
+		// was constructed with positive only, then values less than zero are ignored.
+		public void setMaxValue(Number n)
+		{
+			if (positiveOnly)
+			{
+				float f = n.floatValue();
+				if (f < 0)
+					return;
+			}
+			
+			if (integerOnly)
+			{
+				int i = n.intValue();
+				int min = minValue.intValue();
+				if (i < min)
+					return;
+			}
+			else 
+			{
+				float f = n.floatValue();
+				float min = minValue.floatValue();
+				if (f < min)
+					return;
+			}
+			maxValue = n;
+		}
+		
+		/**
+	  	 * 	@return The value of the text field as either an Integer or a Float, 
+	 	 * 	depending on whether this text field allows Integers or Floats.
+	 	 */
+		public Number getValue()
+		{
+			if (integerOnly)
+				return Integer.valueOf(getText());
+			else
+				return Float.valueOf(getText());
+		}
+		
+		// add an Integer or Float document filter as appropriate
+	    private void addFilter() {
+	    	if (integerOnly)
+	    		( ( AbstractDocument ) getDocument() ).setDocumentFilter( new IntegerDocumentFilter() );
+	    	else
+	    		( ( AbstractDocument ) getDocument() ).setDocumentFilter( new FloatDocumentFilter() );
+	    	
+	    	// apply the filter to the current value
+	    	try 
+	    	{
+	    		String text = getText();
+	    		((AbstractDocument)getDocument()).getDocumentFilter().replace(null, 0, text.length(), text, null); 
+			}
+			catch(Exception e) {}	// NOPMD
+	    }
+	    
+	    
+	  //{{{ ComboBoxEditor methods
+		public Component getEditorComponent()
+		{
+			return this;	
+		}
+		
+		public Object getItem()
+		{
+			return getText();	
+		}
+		
+		public void setItem(Object item)
+		{
+			if (item == null)
+				setText("");
+			else
+				setText(item.toString());
+		}
+		//}}}
+	} // end: Nada A
+
+	
 }
