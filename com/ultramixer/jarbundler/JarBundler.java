@@ -779,8 +779,13 @@ public class JarBundler extends MatchingTask {
 
 		bundleProperties.addJavaProperty(name, value);
 	}
-
-	public void addConfiguredDocumentType(DocumentType documentType) throws BuildException {
+	
+	 /* Start: Nada April 3, 2020, 
+	  * this method is suggested to be moved from JarBundler class to DocumentType class 
+	  * to remove feature envy smell
+	  * However, it is not moved, for more information see the report.
+	  */
+		public void addConfiguredDocumentType(DocumentType documentType) throws BuildException {
 
 		String name = documentType.getName();
 		String role = documentType.getRole();
@@ -799,7 +804,10 @@ public class JarBundler extends MatchingTask {
 							+ "\" must have 'osTypes' or 'extensions' or 'mimeTypes'");
 
 		bundleProperties.addDocumentType(documentType);
-	}
+	} // end: Nada A
+		
+		
+	
 
 	public void addConfiguredService(Service service) {
 
@@ -887,7 +895,9 @@ public class JarBundler extends MatchingTask {
 			deleteTask.setDir(bundleDir);
 			deleteTask.execute();
 		}
-
+		
+		// Start:Nada, A, 4 April, 2020, 1/8 extracted method
+		      mRootDir_Exists(); 
 		// Validate - look for required attributes
 		// ///////////////////////////////////////////
 
@@ -914,120 +924,210 @@ public class JarBundler extends MatchingTask {
 					"Required attribute \"mainclass\" is not set.");
 
 		// /////////////////////////////////////////////////////////////////////////////////////
+	
+		// Start:Nada, A, 4 April, 2020, 1/8 extracted method
+		     processBundleProperties();
 
-		// Set up some Java properties
+		      // 2/8 extracted method
+			  mRootDir_Exists();   
+		
+	   // end: Nada	
+			
+			
+			
+			// Status message
+			log("Creating application bundle: " + bundleDir);
+		
+			
+		   // Start:Nada, A, 4 April, 2020, 3/8 extracted method
+			
+			makeMacOSDirectory();
+	      // end: Nada    		
+			
+			
+			//Copy icon file to resource dir. If no icon parameter is supplied, the default icon will be used
+			copyIconToResource();
+			
+			// Copy document type icons, if any, to the resource dir
+			copyDocumentTypeIcons();
 
-		// About Menu, deprecated under 1.4+
-		if (useOldPropertyNames())
-			bundleProperties.addJavaProperty(ABOUTMENU_KEY, bundleProperties
-					.getCFBundleName());
+			// Copy executable(s) from the "execs" attribute (if any)
+			processExecAttrs();
 
-		// Anti Aliased Graphics, renamed in 1.4+
-		String antiAliasedProperty = useOldPropertyNames()
-				? "com.apple.macosx.AntiAliasedGraphicsOn"
-				: "apple.awt.antialiasing";
+			// Copy executable(s) from the nested execfileset element(s)
+			processExecFileSets();
 
-		if (mAntiAliasedGraphics != null)
-			bundleProperties.addJavaProperty(antiAliasedProperty,
-					mAntiAliasedGraphics.toString());
+			// Copy executable(s) from the nested execfilelist element(s)
+			processExecFileLists();
 
-		// Anti Aliased Text, renamed in 1.4+
-		String antiAliasedTextProperty = useOldPropertyNames()
-				? "com.apple.macosx.AntiAliasedTextOn"
-				: "apple.awt.textantialiasing";
+			// Copy resource(s) from the nested resourcefileset element(s)
+			processResourceFileSets();
 
-		if (mAntiAliasedText != null)
-			bundleProperties.addJavaProperty(antiAliasedTextProperty,
-					mAntiAliasedText.toString());
+			// Copy resource(s) from the nested javafileset element(s)
+			processJavaFileSets();
 
-		// Live Resize, deprecated under 1.4+
-		if (useOldPropertyNames() && (mLiveResize != null))
-			bundleProperties.addJavaProperty(
-					"com.apple.mrj.application.live-resize", mLiveResize
-							.toString());
+			// Copy resource(s) from the nested resourcefilelist element(s)
+			processResourceFileLists();
 
-		// Screen Menu Bar, renamed in 1.4+
-		String screenMenuBarProperty = useOldPropertyNames()
-				? "com.apple.macos.useScreenMenuBar"
-				: "apple.laf.useScreenMenuBar";
+			// Copy resource(s) from the nested javafilelist element(s)
+			processJavaFileLists();
 
-		if (mScreenMenuBar != null)
-			bundleProperties.addJavaProperty(screenMenuBarProperty,
-					mScreenMenuBar.toString());
+			// Copy the JavaApplicationStub file from the Java system directory to
+			// the MacOS directory
+			copyApplicationStub();
 
-		// Growbox, added with 1.4+
-		if ((useOldPropertyNames() == false) && (mGrowbox != null))
-			bundleProperties.addJavaProperty("apple.awt.showGrowBox", mGrowbox
-					.toString());
+			// Create the Info.plist file
+			writeInfoPlist();
 
-		// Growbox Intrudes, deprecated under 1.4+
-		if (useOldPropertyNames() && (mGrowboxIntrudes != null))
-			bundleProperties.addJavaProperty(
-					"com.apple.mrj.application.growbox.intrudes",
-					mGrowboxIntrudes.toString());
+			// Create the PkgInfo file
+			writePkgInfo();
+		
+		
+		// Done!
+	}
+	
+	
+	// Nada, A, 4 April, 2020_ Extracted methods
 
+	public void processBundleProperties() {
+		// 5/8 extracted method
+
+					// About Menu, deprecated under 1.4+
+					if (useOldPropertyNames())
+						bundleProperties.addJavaProperty(ABOUTMENU_KEY, bundleProperties
+								.getCFBundleName());
+
+					// Anti Aliased Graphics, renamed in 1.4+
+					String antiAliasedProperty = useOldPropertyNames()
+							? "com.apple.macosx.AntiAliasedGraphicsOn"
+							: "apple.awt.antialiasing";
+
+					if (mAntiAliasedGraphics != null)
+						bundleProperties.addJavaProperty(antiAliasedProperty,
+								mAntiAliasedGraphics.toString());
+
+					// Anti Aliased Text, renamed in 1.4+
+					String antiAliasedTextProperty = useOldPropertyNames()
+							? "com.apple.macosx.AntiAliasedTextOn"
+							: "apple.awt.textantialiasing";
+
+					if (mAntiAliasedText != null)
+						bundleProperties.addJavaProperty(antiAliasedTextProperty,
+								mAntiAliasedText.toString());
+
+					// Live Resize, deprecated under 1.4+
+					if (useOldPropertyNames() && (mLiveResize != null))
+						bundleProperties.addJavaProperty(
+								"com.apple.mrj.application.live-resize", mLiveResize
+										.toString());
+
+					// Screen Menu Bar, renamed in 1.4+
+					String screenMenuBarProperty = useOldPropertyNames()
+							? "com.apple.macos.useScreenMenuBar"
+							: "apple.laf.useScreenMenuBar";
+
+					if (mScreenMenuBar != null)
+						bundleProperties.addJavaProperty(screenMenuBarProperty,
+								mScreenMenuBar.toString());
+
+					// Growbox, added with 1.4+
+					if ((useOldPropertyNames() == false) && (mGrowbox != null))
+						bundleProperties.addJavaProperty("apple.awt.showGrowBox", mGrowbox
+								.toString());
+
+					// Growbox Intrudes, deprecated under 1.4+
+					if (useOldPropertyNames() && (mGrowboxIntrudes != null))
+						bundleProperties.addJavaProperty(
+								"com.apple.mrj.application.growbox.intrudes",
+								mGrowboxIntrudes.toString());
+					
+					// 4/8 extracted method 
+					bundleDir_Exists();
+
+					// 5/8 extracted method
+					bundleDir_Mkdir();
+
+					// 6/8 extracted method
+					makeContentsDirectory();
+					
+					// 7/8 extracted method
+					makeJavaDir();
+					
+					// 8/8 extracted method 
+					makeResourcesDirectory();
+					
+					
+					
+					// Copy application jar(s) from the "jars" attribute (if any)
+					processJarAttrs();
+
+					// Copy application jar(s) from the nested jarfileset element(s)
+					processJarFileSets();
+
+					// Copy application jar(s) from the nested jarfilelist element(s)
+					processJarFileLists();
+					
+					// Add external classpath references from the extra classpath attributes
+					processExtraClassPathAttrs();
+
+					// Add external classpath references from the nested
+					// extraclasspathfileset element(s)
+					processExtraClassPathFileSets();
+
+					// Add external classpath references from the nested
+					// extraclasspathfilelist attributes
+					processExtraClassPathFileLists();
+
+					// Copy HelpBooks into place
+					copyHelpBooks();
+		
+	}
+	// Method 1: if mRootDir is not Exists, BuildException is handled
+	public void mRootDir_Exists() {
 		if (!mRootDir.exists()
 				|| (mRootDir.exists() && !mRootDir.isDirectory()))
 			throw new BuildException(
 					"Destination directory specified by \"dir\" "
 							+ "attribute must already exist.");
+	}
 
-		if (bundleDir.exists())
-			throw new BuildException("The directory/bundle \""
-					+ bundleDir.getName()
-					+ "\" already exists, cannot continue.");
+	// Method 2: Make the "MacOS" directory
+	public void makeMacOSDirectory() {
+		mMacOsDir = new File(mContentsDir, "MacOS");
 
-		// Status message
-		log("Creating application bundle: " + bundleDir);
+		if (!mMacOsDir.mkdir())
+			throw new BuildException("Unable to create directory " + mMacOsDir);
+	}
 
-		if (!bundleDir.mkdir())
-			throw new BuildException("Unable to create bundle: " + bundleDir);
 
-		// Make the Contents directory
+	// Method 3:Make the Contents directory
+	public void makeContentsDirectory() {
 		mContentsDir = new File(bundleDir, "Contents");
 
 		if (!mContentsDir.mkdir())
 			throw new BuildException("Unable to create directory "
 					+ mContentsDir);
+	}
 
-		// Make the "MacOS" directory
-		mMacOsDir = new File(mContentsDir, "MacOS");
+	// Method 4: Make the "bundle" directory
+	public void bundleDir_Mkdir() {
+		if (!bundleDir.mkdir())
+			throw new BuildException("Unable to create bundle: " + bundleDir);
+	}
 
-		if (!mMacOsDir.mkdir())
-			throw new BuildException("Unable to create directory " + mMacOsDir);
+	// Method 5: if bundleDir exists, an exception is executed 
+	
+	public void bundleDir_Exists() {
+		if (bundleDir.exists())
+			throw new BuildException("The directory/bundle \""
+					+ bundleDir.getName()
+					+ "\" already exists, cannot continue.");
+	}
+	
+	    
+	// Method 6: Copy document type icons, if any, to the resource dir
 
-		// Make the Resources directory
-		mResourcesDir = new File(mContentsDir, "Resources");
-
-		if (!mResourcesDir.mkdir())
-			throw new BuildException("Unable to create directory "
-					+ mResourcesDir);
-
-		// Make the Resources/Java directory
-		mJavaDir = new File(bundleProperties.getJavaVersion() < 1.7 ? mResourcesDir : mContentsDir, "Java");
-
-		if (!mJavaDir.mkdir())
-			throw new BuildException("Unable to create directory " + mJavaDir);
-
-		// Copy icon file to resource dir. If no icon parameter
-		// is supplied, the default icon will be used.
-
-		if (mAppIcon != null) {
-
-
-			try {
-				File dest = new File(mResourcesDir, mAppIcon.getName());
-
-				if(mVerbose)
-					log("Copying application icon file to \"" + bundlePath(dest) + "\"");
-
-				mFileUtils.copyFile(mAppIcon, dest);
-			} catch (IOException ex) {
-				throw new BuildException("Cannot copy icon file: " + ex);
-			}
-		}
-
-		// Copy document type icons, if any, to the resource dir
+	public void copyDocumentTypeIcons() {
 		try {
 			Iterator itor = bundleProperties.getDocumentTypes().iterator();
 
@@ -1044,63 +1144,51 @@ public class JarBundler extends MatchingTask {
 		} catch (IOException ex) {
 			throw new BuildException("Cannot copy document icon file: " + ex);
 		}
-
-		// Copy application jar(s) from the "jars" attribute (if any)
-		processJarAttrs();
-
-		// Copy application jar(s) from the nested jarfileset element(s)
-		processJarFileSets();
-
-		// Copy application jar(s) from the nested jarfilelist element(s)
-		processJarFileLists();
-
-		// Copy executable(s) from the "execs" attribute (if any)
-		processExecAttrs();
-
-		// Copy executable(s) from the nested execfileset element(s)
-		processExecFileSets();
-
-		// Copy executable(s) from the nested execfilelist element(s)
-		processExecFileLists();
-
-		// Copy resource(s) from the nested resourcefileset element(s)
-		processResourceFileSets();
-
-		// Copy resource(s) from the nested javafileset element(s)
-		processJavaFileSets();
-
-		// Copy resource(s) from the nested resourcefilelist element(s)
-		processResourceFileLists();
-
-		// Copy resource(s) from the nested javafilelist element(s)
-		processJavaFileLists();
-
-		// Add external classpath references from the extraclasspath attributes
-		processExtraClassPathAttrs();
-
-		// Add external classpath references from the nested
-		// extraclasspathfileset element(s)
-		processExtraClassPathFileSets();
-
-		// Add external classpath references from the nested
-		// extraclasspathfilelist attributes
-		processExtraClassPathFileLists();
-
-		// Copy HelpBooks into place
-		copyHelpBooks();
-
-		// Copy the JavaApplicationStub file from the Java system directory to
-		// the MacOS directory
-		copyApplicationStub();
-
-		// Create the Info.plist file
-		writeInfoPlist();
-
-		// Create the PkgInfo file
-		writePkgInfo();
-
-		// Done!
 	}
+
+		
+	// Method 7: Copy icon file to resource dir. If no icon parameter
+	
+	// is supplied, the default icon will be used.
+	public void copyIconToResource() {
+
+		if (mAppIcon != null) {
+
+
+			try {
+				File dest = new File(mResourcesDir, mAppIcon.getName());
+
+				if(mVerbose)
+					log("Copying application icon file to \"" + bundlePath(dest) + "\"");
+
+				mFileUtils.copyFile(mAppIcon, dest);
+			} catch (IOException ex) {
+				throw new BuildException("Cannot copy icon file: " + ex);
+			}
+		}
+	}
+	
+   // Method 9: Make the Resources directory 
+	
+	public void makeResourcesDirectory() {
+		
+		mResourcesDir = new File(mContentsDir, "Resources");
+
+		if (!mResourcesDir.mkdir())
+			throw new BuildException("Unable to create directory "
+					+ mResourcesDir);
+	
+	}
+	// Make the Java directory
+
+	public void makeJavaDir() {
+		mJavaDir = new File(bundleProperties.getJavaVersion() < 1.7 ? mResourcesDir : mContentsDir, "Java");
+
+		if (!mJavaDir.mkdir())
+			throw new BuildException("Unable to create directory " + mJavaDir);
+	}// end: Nada, A
+	
+
 
 	/***************************************************************************
 	 * Private utility methods.
